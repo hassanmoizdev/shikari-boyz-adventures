@@ -17,6 +17,7 @@ export const EventCard = ({ event }: EventCardProps) => {
 
   const eventDateTime = new Date(`${event.date}T${event.time}`);
   const formattedDate = format(eventDateTime, "EEEE, MMMM d, yyyy");
+  const formattedTime = format(eventDateTime, "h:mm a");
   const spotsRemaining = event.maxAttendees ? event.maxAttendees - event.currentAttendees : null;
 
   useEffect(() => {
@@ -124,7 +125,7 @@ export const EventCard = ({ event }: EventCardProps) => {
           </div>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Clock className="w-4 h-4 text-accent" />
-            <span>{event.time}</span>
+            <span>{formattedTime}</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <MapPin className="w-4 h-4 text-accent" />
