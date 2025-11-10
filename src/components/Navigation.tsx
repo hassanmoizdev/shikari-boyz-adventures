@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Hunts", href: "#hunts" },
   { name: "Gallery", href: "#gallery" },
   { name: "Field Notes", href: "#field-notes" },
+  { name: "Events", href: "#events" },
   { name: "Store", href: "#store" },
   { name: "Membership", href: "#membership" },
   { name: "Contact", href: "#contact" },
